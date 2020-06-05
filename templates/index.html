@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Covid</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="/static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/static/js/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+               <div class="main">
+                  <div class="logo"><a href="index.html"><img src="/static/images/logo.jpeg" height="112" width="112"></a></div>
+                  <div class="menu_text">
+                     <ul>
+                        <div class="togle_">
+                           <div class="menu_main">
+                              <ul>
+                                 <!--<li><a href="#">Login</a></li>-->
+                                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div id="myNav" class="overlay">
+                           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                           <div class="overlay-content">
+                              <a href="/">Home</a>
+                              <a href="{{url_for('outbreak')}}"> Corona Virus Outbreak Predictions</a>
+                              <a href="{{url_for('probability')}}">Corona Infection Probability Prediction</a>
+                              <a href="{{url_for('trends')}}">Critical Trends</a>
+                              <!--<<a href="news.html">News</a>-->
+                           </div>
+                        </div>
+                        <span class="navbar-toggler-icon"></span>
+                        <span onclick="openNav()"><img src="/static/images/toogle-icon.png" class="toggle_menu"></span>
+                        <span onclick="openNav()"><img src="/static/images/toogle-icon1.png" class="toggle_menu_1"></span>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="container">
+                              <h1 class="banner_taital">Covid-19 outbreak prediction</h1>
+                              <p class="banner_text">The resources can be manage using outbreak predictions  </p>
+                              <div class="more_bt"><a href="{{url_for('outbreak')}}">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="/static/images/banner-img.png"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="container">
+                              <h1 class="banner_taital">Covid-19 infection probabilty predictor  </h1>
+                              <p class="banner_text">Prioritizing resources for those most vulnerable to complications from
+COVID-19.</p>
+                              <div class="more_bt"><a href="{{url_for('probability')}}">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="/static/images/mask.jpeg"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="container">
+                              <h1 class="banner_taital">Covid-19 critical trends</h1>
+                              <p class="banner_text">Explore some trends related to covid-19</p>
+                              <div class="more_bt"><a href="{{url_for('trends')}}">Read More</a></div>
+                           </div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="/static/images/circle.jpeg"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+         </div>            
+      </div>
+      <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- protect section start -->
+      <div class="protect_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="protect_taital">How to Protect Yourself</h1>
+                  <p class="protect_text"></p>
+               </div>
+            </div>
+            <div class="protect_section_2 layout_padding">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h1 class="hands_text"><a href="#">Wash your <br>hands frequently</a></h1>
+                     <h1 class="hands_text_2"><a href="#">Maintain social <br>distancing</a></h1>
+                     <h1 class="hands_text"><a href="#">Avoid touching eyes,<br>nose and mouth</a></h1>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="image_2"><img src="/static/images/img-2.png"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- protect section end -->
+      <!-- about section start -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="about_img"><img src="/static/images/img-1.png"></div>
+               </div>
+               <div class="col-md-6">
+                  <h1 class="about_taital">Coronavirus what it is?</span></h1>
+                  <p class="about_text">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.</p>
+                  <div class="read_bt"><a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">Read More</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about section end -->
+      <!-- doctor section start -->
+      <div class="doctors_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="taital_main">
+                     <div class="taital_left">
+                        <!-- <div class="play_icon"><img src="/static/images/play-icon.png"></div>-->
+                     </div>
+                     <div class="taital_right">
+                        <h1 class="doctor_taital">What doctors say..</h1>
+                        <p class="doctor_text">Doctors for Seva said in a joint statement: “This is a risky strategy. It is a pandemic. It demands that government follow international guidelines which have been chalked out and (which) brought the situation in control in Europe, China and the USA. We have to follow protocols to safeguard our people. The decision of TS to not test is very disturbing and will backfire very badly.”k</p>
+                        <div class="readmore_bt"><a href="https://www.deccanchronicle.com/nation/current-affairs/020520/doctors-telangana-official-covid-19-figures-are-just-not-true.html">Read More</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- doctor section end -->
+      <!-- news section start -->
+      <div class="news_section layout_padding">
+         <div class="container">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <h1 class="news_taital">Latest News</h1>
+                     <p class="news_text"></p>
+                     <div class="news_section_2 layout_padding">
+                        <div class="box_main">
+                           <div class="image_1"><img src="/static/images/news-img.png"></div>
+                           <h2 class="design_text">Coronavirus on it's way to peak.</h2>
+                           <p class="lorem_text">Coronavirus tally in India surges to 1,83,143 cases. The nationwide lockdown in containment zones will continue till June 30 but extensive relaxations, including opening of religious places and shopping malls, will be in a phased manner from June 8.</p>
+                           <div class="read_btn"><a href="https://indianexpress.com/article/explained/india-coronavirus-cases-growth-rate-slowing-6440341/">Read More</a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h1 class="news_taital">Latest News</h1>
+                     <p class="news_text">Economic Times</p>
+                     <div class="news_section_2 layout_padding">
+                        <div class="box_main">
+                           <div class="image_1"><img src="/static/images/1.jpeg"></div>
+                           <h2 class="design_text"></h2>
+                           <p class="lorem_text">States that have seen sharpest single-day spike in total cases are Delhi (1,105), Tamil Nadu (874), Karnataka (248), Haryana (217), Uttarakhand (216), Telangana (169), Assam (168)</p>
+                           <div class="read_btn"><a href="https://economictimes.indiatimes.com/news/politics-and-nation/coronavirus-live-news-updates-covid19-cases-in-india-may-31/liveblog/76114785.cms">Read More</a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h1 class="news_taital">Latest News</h1>
+                     <p class="news_text"></p>
+                     <div class="news_section_2 layout_padding">
+                        <div class="box_main">
+                           <div class="image_1"><img src="/static/images/images.jpg"></div>
+                           <h2 class="design_text">Times Of India</h2>
+                           <p class="lorem_text">The nationwide tally of confirmed Covid-19 cases crossed the 2-lakh mark with almost one lakh people testing positive for the dreaded virus infection in the last 15 days. Cases jumped by 8,909 over 24 hours in one of the highest single-day spikes, taking the tally to 207,615, the health ministry said.</p>
+                           <div class="read_btn"><a href="https://timesofindia.indiatimes.com/india/coronavirus-in-india-live-updates-record-single-day-spike-of-8909-covid-19-cases-in-india/liveblog/76165967.cms">Read More</a></div>
+                        </div>
+                     </div>      
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+            </div>
+         </div>
+      </div>
+      <!-- news section end -->
+      <!-- update section start -->
+      
+      <!-- update section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Resources</h2>
+                     <div class="footer_menu">
+                        <ul>
+                           <li><a href="https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset?select=covid_19_data.csv"> Novel corona virus dataset world wide</a></li>
+                           <li><a href="https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset?select=covid_19_data.csv">covid 19 India dataset</a></li>
+                           <li><a href="https://www.mohfw.gov.in/">Ministry of health and welfare India</a></li>
+                           
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">About</h2>
+                     <p class="footer_text">The project entitled “ corna virus predictor” submitted in partial fulfillment for the award of the degree of Bachelor of Technology in ‘Computer Science And Engineering’ completed by Nidhi Balani and Nikhil Agrawal is an authentic work just to showcase prediction scenerio of corona.It doesnot claim to meet the real ground basis intead focus on nearsome prediction.</p>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">Contact Us</h2>
+                     <div class="location_text">
+                        <ul>
+                           <li>
+                              <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                              <span class="padding_15">Location : India</span></a>
+                           </li>
+                           <li>
+                              <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>
+                              <span class="padding_15">Call +91 7898795587</span></a>
+                           </li>
+                           <li>
+                              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+                              <span class="padding_15">nikhil171agrawal@gmail.com</span></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <h2 class="useful_text">countrys</h2>
+                     <div class="map_image"><img src="/static/images/map-bg.png"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <p class="copyright_text">© 2020 All Rights Reserved.<a href="https://html.design"> </a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="/static/js/jquery.min.js"></script>
+      <script src="/static/js/popper.min.js"></script>
+      <script src="/static/js/bootstrap.bundle.min.js"></script>
+      <script src="/static/js/jquery-3.0.0.min.js"></script>
+      <script src="/static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/static/js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="/static/js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+              
+         $(".zoom").hover(function(){
+              
+         $(this).addClass('transition');
+         }, function(){
+              
+         $(this).removeClass('transition');
+         });
+         });
+      </script> 
+      <script>
+         function openNav() {
+         document.getElementById("myNav").style.width = "100%";
+         }
+         function closeNav() {
+         document.getElementById("myNav").style.width = "0%";
+         }
+      </script>  
+   </body>
+</html>
